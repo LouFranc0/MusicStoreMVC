@@ -24,7 +24,7 @@
                         @if (User.IsInRole("Amministratore"))
                         {
                             <li>@Html.ActionLink("Ordini", "Index", "Ordini", new { area = "" }, new { @class = "nav-link text-white" })</li>
-                            <li>@Html.ActionLink("Totale Ordini Evasi", "OrdiniEvasi", "Admin", new { area = "" }, new { @class = "nav-link text-white" })</li>
+                            <li>@Html.ActionLink("Totale Ordini Pagati", "OrdiniEvasi", "Admin", new { area = "" }, new { @class = "nav-link text-white" })</li>
                             <li>@Html.ActionLink("Totale Incassato", "TotaleIncassato", "Admin", new { area = "" }, new { @class = "nav-link text-white" })</li>
 
 

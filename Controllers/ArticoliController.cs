@@ -51,7 +51,7 @@ namespace EcommerceChitarre.Controllers
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Amministratore")]
 
-        public ActionResult Create([Bind(Include = "Articolo_ID,Nome,Img,Prezzo,Tempo_Cons,Ingredienti")] Articoli articoli)
+        public ActionResult Create([Bind(Include = "Articolo_ID,Nome,Img,Prezzo,Tempo_Cons,Dettagli")] Articoli articoli)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace EcommerceChitarre.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Amministratore")]
-        public ActionResult Edit([Bind(Include = "Articolo_ID,Nome,Img,Prezzo,Tempo_Cons,Ingredienti")] Articoli articoli)
+        public ActionResult Edit([Bind(Include = "Articolo_ID,Nome,Img,Prezzo,Tempo_Cons,Dettagli")] Articoli articoli)
         {
             if (ModelState.IsValid)
             {

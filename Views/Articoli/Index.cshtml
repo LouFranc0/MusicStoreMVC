@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<EcommerceChitarre.Models.Articoli>
 
 @{
-    ViewBag.Title = "Products";
+    ViewBag.Title = "Prodotti";
 }
 <!DOCTYPE html>
 <html>
@@ -26,8 +26,8 @@
 
     @if (User.IsInRole("Amministratore"))
     {
-        <div class="text-center">
-            @Html.ActionLink("Aggiungi Articolo", "Create", null, new { @class = "btn btn-primary btn-lg" })
+        <div class="text-danger">
+            @Html.ActionLink("Aggiungi Articolo", "Create", null, new { @class = "btn btn-primary" })
         </div>
         <div class="table-responsive mt-4">
             <table class="table table-striped">

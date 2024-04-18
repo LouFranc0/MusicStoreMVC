@@ -9,7 +9,6 @@ namespace EcommerceChitarre.Models
     [Table("Articoli")]
     public partial class Articoli
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Articoli()
         {
             OrdArt = new HashSet<OrdArt>();
@@ -34,7 +33,6 @@ namespace EcommerceChitarre.Models
         [Required]
         public string Dettagli { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrdArt> OrdArt { get; set; }
     }
 }

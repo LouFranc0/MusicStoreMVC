@@ -176,6 +176,10 @@
     <Compile Include="Migrations\202404150901105_InitialCreate.Designer.cs">
       <DependentUpon>202404150901105_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202404182236355_SecondMigration.cs" />
+    <Compile Include="Migrations\202404182236355_SecondMigration.Designer.cs">
+      <DependentUpon>202404182236355_SecondMigration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ArtCart.cs" />
     <Compile Include="Models\Articoli.cs" />
@@ -351,6 +355,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202404150901105_InitialCreate.resx">
       <DependentUpon>202404150901105_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404182236355_SecondMigration.resx">
+      <DependentUpon>202404182236355_SecondMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
