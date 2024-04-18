@@ -1,0 +1,38 @@
+﻿@model List<EcommerceChitarre.Models.Ordini>
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">I tuoi ordini</h2>
+
+    @foreach (var order in Model)
+    {
+        <div class="card mb-4">
+            <div class="card-body">
+                <h4 class="card-title text-primary">Ordine: @order.Ordine_ID</h4>
+                <dl class="row">
+                    <dt class="col-sm-3">Nome Cliente:</dt>
+                    <dd class="col-sm-9">@order.Users.Nome</dd>
+
+                    <dt class="col-sm-3">Indirizzo di consegna:</dt>
+                    <dd class="col-sm-9">@order.Indirizzo</dd>
+
+                    <dt class="col-sm-3">Totale:</dt>
+                    <dd class="col-sm-9">@order.Totale</dd>
+
+
+                    
+                        <dt class="col-sm-3">Data:</dt>
+                        <dd class="col-sm-9">@order.Data</dd>
+                  
+
+                </dl>
+            </div>
+            <div class="card-footer d-flex justify-content-end" style="background-color: #f8f9fa;">
+                <a href="/OrdArts/Details/@order.Ordine_ID" class="btn btn-outline-success">Prodotti acquistati</a>
+            </div>
+        </div>
+    }
+</div>

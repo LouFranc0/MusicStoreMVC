@@ -1,0 +1,112 @@
+﻿@model EcommerceChitarre.Models.Ordini
+
+@{
+    ViewBag.Title = "Carrello";
+}
+
+<style>
+    .btn-quantity {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+        line-height: 18px;
+        border-radius: 50%;
+        padding: 0;
+    }
+
+        .btn-quantity:hover {
+            background-color: #e9ecef;
+        }
+
+        .btn-quantity span {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+</style>
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Carrello</h2>
+
+    @if (ViewBag.UserCart != null && ViewBag.UserCart.Count > 0)
+    {
+        <div class="row">
+            <div class="col-md-8">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Prezzo</th>
+                            <th>Quantità</th>
+                            <th>Rimuovi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in ViewBag.UserCart)
+                        {
+                            <tr>
+                                <td>@item.Articolo.Nome</td>
+                                <td>@item.Articolo.Prezzo €</td>
+                                <td>
+                                    @using (Html.BeginForm("AggiornaQuantita", "OrdArts", FormMethod.Post))
+                                    {
+                                        <input type="hidden" name="articoloId" value="@item.Articolo.Articolo_ID" />
+                                        <div class="btn-group" role="group">
+                                            <button type="submit" name="operazione" value="incrementa" class="btn btn-primary btn-quantity"><span>+</span></button>
+                                            <span class="btn btn-light">@item.Quantita</span>
+                                            <button type="submit" name="operazione" value="decrementa" class="btn btn-primary btn-quantity"><span>-</span></button>
+                                        </div>
+                                    }
+                                </td>
+                                <td>
+                                    @using (Html.BeginForm("RimuoviDallCarrello", "OrdArts", FormMethod.Post))
+                                    {
+                                        <input type="hidden" name="articoloId" value="@item.Articolo.Articolo_ID" />
+                                        <input type="submit" value="Elimina" class="btn btn-outline-danger" />
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+
+                @using (Html.BeginForm("SvuotaCarrello", "OrdArts", FormMethod.Post))
+                {
+                    <input type="submit" value="Svuota Carrello" class="btn btn-outline-danger" />
+                }
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        @using (Html.BeginForm("CreateOrderFromCart", "OrdArts", FormMethod.Post))
+                        {
+                            @Html.AntiForgeryToken()
+
+                            <h4 class="card-title">Ordina</h4>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Indirizzo, htmlAttributes: new { @class = "control-label" })
+                                @Html.EditorFor(model => model.Indirizzo, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Indirizzo, "", new { @class = "text-danger" })
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Note, htmlAttributes: new { @class = "control-label" })
+                                @Html.EditorFor(model => model.Note, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Note, "", new { @class = "text-danger" })
+                            </div>
+
+                            <div class="text-center my-2">
+                                <input type="submit" value="Conferma Ordine" class="btn btn-success" />
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <p class="text-center">Il carrello è vuoto</p>
+    }
+</div>

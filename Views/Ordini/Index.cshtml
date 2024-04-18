@@ -1,0 +1,66 @@
+﻿@model IEnumerable<EcommerceChitarre.Models.Ordini>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Lista Ordini</h2>
+
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Users.Nome)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Users.Cognome)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Indirizzo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Note)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Stato)
+                </th>
+                <th>
+                    Costo Consegna
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Users.Nome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Users.Cognome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Indirizzo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Note)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Stato)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CostoCons)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Ordine_ID }, new { @class = "btn btn-primary" })
+                        <a href="/OrdArts/Details/@item.Ordine_ID" class="btn btn-info">Details</a> 
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Ordine_ID }, new { @class = "btn btn-danger" })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

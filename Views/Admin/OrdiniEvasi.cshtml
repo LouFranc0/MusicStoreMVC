@@ -1,0 +1,29 @@
+﻿<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h2 class="text-center">Ordini Evasi</h2>
+            <button id="fetchButton" class="btn btn-primary btn-block">Ottieni Totale Ordini Evasi</button>
+            <div id="totalEvasi" class="text-center"></div>
+        </div>
+    </div>
+</div>
+<script>
+    
+    document.getElementById('fetchButton').addEventListener('click', function () {
+        fetch('/Admin/GetOrdiniEvasi')
+            .then(response => response.json())
+            .then(data => {
+                if (Array.isArray(data)) { 
+                    var totalEvasi = data.length; 
+
+                    document.getElementById('totalEvasi').innerHTML = '<h3>Totale Ordini Evasi: ' + totalEvasi + '</h3>';
+                } else {
+                    console.error('I dati restituiti non sono un array.');
+                }
+            })
+            .catch(error => {
+                console.error('Errore durante il recupero dei dati:', error);
+            });
+    });
+
+</script>

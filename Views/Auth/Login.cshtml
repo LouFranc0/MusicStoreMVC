@@ -1,0 +1,50 @@
+﻿@using EcommerceChitarre.Models
+@model Users
+@{
+    ViewBag.Title = "Login";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <div class="me-3">
+                <img src="https://it.ooni.com/cdn/shop/articles/Margherita-9920.jpg?crop=center&height=800&v=1644590028&width=800" alt="pizza login" class="w-75 img-fluid rounded shadow" />
+            </div>
+        </div>
+
+        <div class="col-6">
+            <h2>Login</h2>
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                if (TempData["ErrorLogin"] != null)
+                {
+        <div class="alert alert-danger alert-dismissible  fade show w-50" role="alert">
+            Le credenziali non sono corrette
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+                }
+
+
+
+                <div class="mb-3">
+                    @Html.LabelFor(model => model.Email, new { @class = "form-label" })
+                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+
+                <div class="mb-3">
+                    @Html.LabelFor(model => model.Password, new { @class = "form-label" })
+                    @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+
+
+                <button type="submit" class="btn btn-outline-success rounded-pill text-center mb-2">Login</button>
+            }
+            <p>Non hai un account?  @Html.ActionLink("Registrati ora", "Create", "Users", new { area = "" }, new { @class = "nav-link d-inline text-primary-emphasis fw-bold" })</p>
+        </div>
+
+        </div>
+
+
+    </div>
+

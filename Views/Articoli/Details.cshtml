@@ -1,0 +1,42 @@
+﻿@model EcommerceChitarre.Models.Articoli
+
+@{
+    ViewBag.Title = "Dettagli Articolo";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Dettagli Articolo</h2>
+
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">@Model.Nome</h4>
+            <hr />
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="@Model.Img" class="img-fluid rounded" alt="@Model.Nome">
+                </div>
+                <div class="col-md-8">
+                    <dl class="row">
+                        <dt class="col-sm-3">Prezzo:</dt>
+                        <dd class="col-sm-9">@Model.Prezzo €</dd>
+
+                        <dt class="col-sm-3">Tempo di cottura:</dt>
+                        <dd class="col-sm-9">@Model.Tempo_Cons </dd>
+
+                        <dt class="col-sm-3">Ingredienti:</dt>
+                        <dd class="col-sm-9">@Model.Dettagli</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <div class="text-center">
+                @if (User.IsInRole("Amministratore"))
+                {
+                    <a href="@Url.Action("Edit", new { id = Model.Articolo_ID })" class="btn btn-primary">Modifica</a>
+                }
+                @Html.ActionLink("Torna alla lista", "Index", null, new { @class = "btn btn-secondary" })
+            </div>
+        </div>
+    </div>
+</div>

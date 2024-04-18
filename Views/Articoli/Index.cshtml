@@ -1,0 +1,94 @@
+﻿@model IEnumerable<EcommerceChitarre.Models.Articoli>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewBag.Title - Applicazione ASP.NET</title>
+    @Styles.Render("~/Content/bootstrap.min.css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <style>
+        .card-img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="text-start mb-4">Le nostre pizze</h2>
+
+    @if (User.IsInRole("Amministratore"))
+    {
+        <div class="text-center">
+            @Html.ActionLink("Aggiungi Articolo", "Create", null, new { @class = "btn btn-primary btn-lg" })
+        </div>
+        <div class="table-responsive mt-4">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Nome)</th>
+                        <th>Immagine</th>
+                        <th>@Html.DisplayNameFor(model => model.Prezzo)</th>
+                        <th>@Html.DisplayNameFor(model => model.Dettagli)</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(modelItem => item.Nome)</td>
+                            <td><img src="@item.Img" class="card-img" alt="@item.Nome"></td>
+                            <td>@Html.DisplayFor(modelItem => item.Prezzo) €</td>
+                            <td>@Html.DisplayFor(modelItem => item.Dettagli)</td>
+                            <td>
+                                <div class="btn-group btn-group-sm" role="group" aria-label="Actions">
+                                    @Html.ActionLink("Edit", "Edit", new { id = item.Articolo_ID }, new { @class = "btn btn-info mx-1" })
+                                    @Html.ActionLink("Delete", "Delete", new { id = item.Articolo_ID }, new { @class = "btn btn-danger mx-1" })
+                                    @Html.ActionLink("Details", "Details", new { id = item.Articolo_ID }, new { @class = "btn btn-secondary mx-1" })
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else
+    {
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 mt-4">
+    @foreach (var item in Model)
+    {
+        <div class="col mb-4">
+            <a href="@Url.Action("Details", "Articoli", new { id = item.Articolo_ID })" class="text-decoration-none">
+                <div class="card h-100 c-card container img">
+                    <img src="@item.Img" class="card-img w-100 mt-2" alt="@item.Nome">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title" style="color: #820905;">@item.Nome</h5>
+                        <p class="card-text text-secondary">@item.Prezzo €</p>
+                        <p class="card-text text-secondary">@item.Dettagli</p>
+                        <div class="mt-auto d-flex">
+                            @using (Html.BeginForm("AddToCart", "OrdArts", new { id = item.Articolo_ID }, FormMethod.Post))
+                            {
+                                <input class="btn btn-success rounded-pill" type="submit" value="Aggiungi all'ordine" />
+                            }
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+
+    }
+</div>
+    }
+</body>
+</html>

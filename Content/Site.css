@@ -1,0 +1,80 @@
+﻿
+﻿@font-face {
+    font-family: 'Dancing Script';
+    src: url('percorso/del/tuo/font/DancingScript-Regular.ttf') format('truetype');
+    /* Aggiungi altri formati e stili del font se necessario */
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    margin-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.r-navbar {
+    background-color: #A20600 !important;
+    color: #E4E4DA;
+}
+.brand-tlt {
+    font-size: 20px;
+    font-family: 'Dancing Script', cursive;
+    margin-bottom: 0px;
+}
+
+.footer {
+    background-color: #f8f9fa;
+    padding: 25px 0;
+    color: #636b6f;
+    font-size: 14px;
+    border-top: 1px solid #dee2e6;
+}
+
+    .footer a {
+        color: #636b6f;
+        text-decoration: none;
+    }
+
+        .footer a:hover {
+            color: #28a745;
+        }
+
+
+.navbar-nav .nav-link:hover {
+    color: #28a745!important; 
+}
+
+.c-card, .container img {
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+    .c-card:hover, .container img:hover {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        transform: scale(1.015);
+    }
+
+.btn-quantity {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    line-height: 18px;
+    border-radius: 15px;
+    padding: 0;
+}
+
+    .btn-quantity:hover {
+        background-color: #e9ecef;
+    }
+
+    .btn-quantity span {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }

@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title - Applicazione ASP.NET</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap">
+</head>
+<body>
+    <div class="d-flex flex-column min-vh-100">
+
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm  r-navbar text-white sticky-top">
+            <div class="container d-flex justify-content-between">
+                <div class="d-flex align-items-center">
+                    <a class="navbar-brand brand-tlt text-white" href="@Url.Action("Index", "Home")">
+                        <img src="https://www.ortodivi.it/wp-content/uploads/2021/06/basilico_fresco.png" alt="Logo" class="navbar-logo" width="60" height="60" />
+                        Since1996
+                    </a>
+                    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Attiva/Disattiva spostamento" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <ul class="navbar-nav flex-grow-1">
+                        @if (User.IsInRole("Amministratore"))
+                        {
+                            <li>@Html.ActionLink("Ordini", "Index", "Ordini", new { area = "" }, new { @class = "nav-link text-white" })</li>
+                            <li>@Html.ActionLink("Totale Ordini Evasi", "OrdiniEvasi", "Admin", new { area = "" }, new { @class = "nav-link text-white" })</li>
+                            <li>@Html.ActionLink("Totale Incassato", "TotaleIncassato", "Admin", new { area = "" }, new { @class = "nav-link text-white" })</li>
+
+
+                            <li>@Html.ActionLink("Articoli", "Index", "Articoli", new { area = "" }, new { @class = "nav-link text-white" })</li>
+                        }
+                        else if (User.IsInRole("Cliente"))
+                        {
+                            <li>@Html.ActionLink("I tuoi Ordini", "Details", "Ordini", new { id = User.Identity.Name }, new { @class = "nav-link text-white" })</li>
+                        }
+                    </ul>
+
+                </div>
+
+                <div>
+                    <ul class="navbar-nav">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            if (User.IsInRole("Cliente"))
+                            {
+                                <li class="nav-item">@Html.ActionLink("🛒", "Cart", "OrdArts", new { area = "" }, new { @class = "nav-link text-white" })</li>
+                            }
+                            <li class="nav-item">@Html.ActionLink("Logout", "Logout", "Auth", new { area = "" }, new { @class = "nav-link text-white" })</li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">@Html.ActionLink("Login", "Login", "Auth", new { area = "" }, new { @class = "nav-link text-white" })</li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="container body-content flex-grow-1">
+            @RenderBody()
+
+
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="text-muted">&copy; @DateTime.Now.Year - Pizzeria Since1996</p>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><a href="#">Termini e condizioni</a></li>
+                            <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+                            <li class="list-inline-item"><a href="#">Contattaci</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        </div>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+</body>
+</html>
