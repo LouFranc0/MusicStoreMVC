@@ -17,14 +17,9 @@
             <div class="container d-flex justify-content-between">
                 <div class="d-flex align-items-center">
                     <a class="navbar-brand brand-tlt text-white" href="@Url.Action("Index", "Home")">
-                        <img src="https://www.ortodivi.it/wp-content/uploads/2021/06/basilico_fresco.png" alt="Logo" class="navbar-logo" width="60" height="60" />
-                        Since1996
+                        Music Shop
                     </a>
-                    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Attiva/Disattiva spostamento" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
+                 
                     <ul class="navbar-nav flex-grow-1">
                         @if (User.IsInRole("Amministratore"))
                         {
@@ -37,6 +32,8 @@
                         }
                         else if (User.IsInRole("Cliente"))
                         {
+
+                            <li>@Html.ActionLink("Articoli", "Index", "Articoli", new { area = "" }, new { @class = "nav-link text-white" })</li>
                             <li>@Html.ActionLink("I tuoi Ordini", "Details", "Ordini", new { id = User.Identity.Name }, new { @class = "nav-link text-white" })</li>
                         }
                     </ul>
@@ -49,7 +46,7 @@
                         {
                             if (User.IsInRole("Cliente"))
                             {
-                                <li class="nav-item">@Html.ActionLink("🛒", "Cart", "OrdArts", new { area = "" }, new { @class = "nav-link text-white" })</li>
+                                <li class="nav-item">@Html.ActionLink("Il tuo Carrello", "Cart", "OrdArts", new { area = "" }, new { @class = "nav-link text-white" })</li>
                             }
                             <li class="nav-item">@Html.ActionLink("Logout", "Logout", "Auth", new { area = "" }, new { @class = "nav-link text-white" })</li>
                         }
@@ -62,29 +59,43 @@
             </div>
         </nav>
 
+        <div class="p-5 text-white bg-dark text-center">
+            <h1>Benvenuto al Music Shop</h1>
+
+        </div>
+
 
         <div class="container body-content flex-grow-1">
             @RenderBody()
 
 
         </div>
-        <footer class="footer">
+
+        <hr />
+        <footer class="mt-5">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
-                        <p class="text-muted">&copy; @DateTime.Now.Year - Pizzeria Since1996</p>
+                    <div class="col-md-4">
+                        <h5>Contatti</h5>
+                        <p>Piazza della Musica, 20</p>
+                        <p>Telefono: 0832797979</p>
+                        <p>Email: music@shop.it</p>
                     </div>
-                    <div class="col-md-6 text-right">
-                        <ul class="list-inline">
-                            <li class="list-inline-item"><a href="#">Termini e condizioni</a></li>
-                            <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
-                            <li class="list-inline-item"><a href="#">Contattaci</a></li>
-                        </ul>
+                    <div class="col-md-4">
+                        <h5>Orari</h5>
+                        <p>Lunedì - Sabato: 08:30 - 12:30 / 16:30 - 20:00</p>
                     </div>
+                </div>
+                <hr class="bg-white" />
+                <div class="text-center">
+                    <p>@DateTime.Now.Year - <b>Music Shop &reg;</b></p>
                 </div>
             </div>
         </footer>
-        </div>
+    </div>
+ 
+  
+
 
         @Scripts.Render("~/bundles/jquery")
         @Scripts.Render("~/bundles/bootstrap")

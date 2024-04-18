@@ -1,9 +1,4 @@
 ﻿
-﻿@font-face {
-    font-family: 'Dancing Script';
-    src: url('percorso/del/tuo/font/DancingScript-Regular.ttf') format('truetype');
-    /* Aggiungi altri formati e stili del font se necessario */
-}
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
@@ -25,7 +20,6 @@ textarea {
 }
 .brand-tlt {
     font-size: 20px;
-    font-family: 'Dancing Script', cursive;
     margin-bottom: 0px;
 }
 
@@ -47,9 +41,7 @@ textarea {
         }
 
 
-.navbar-nav .nav-link:hover {
-    color: #28a745!important; 
-}
+
 
 .c-card, .container img {
     transition: box-shadow 0.3s, transform 0.3s;
