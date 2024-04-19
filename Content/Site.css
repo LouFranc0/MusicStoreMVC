@@ -40,18 +40,6 @@ textarea {
             color: #28a745;
         }
 
-
-
-
-.c-card, .container img {
-    transition: box-shadow 0.3s, transform 0.3s;
-}
-
-    .c-card:hover, .container img:hover {
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-        transform: scale(1.015);
-    }
-
 .btn-quantity {
     width: 30px;
     height: 30px;

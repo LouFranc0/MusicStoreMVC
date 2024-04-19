@@ -35,7 +35,7 @@ namespace EcommerceChitarre.Models
         public string Password { get; set; }
 
         [StringLength(50)]
-        public string Ruolo { get; set; }
+        public string Ruolo { get; set; } = "Cliente";
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Ordini> Ordini { get; set; }

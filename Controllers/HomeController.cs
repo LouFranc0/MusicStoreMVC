@@ -15,7 +15,7 @@ namespace  EcommerceChitarre.Controllers
             {
                 return RedirectToAction("Index", "Ordini");
             }
-                return RedirectToAction("Index","Articoli");
+                return View();
         }
     }
 }
