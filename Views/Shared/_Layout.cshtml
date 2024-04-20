@@ -24,12 +24,12 @@
                     <ul class="navbar-nav flex-grow-1">
                         @if (User.IsInRole("Amministratore"))
                         {
+                            <li>@Html.ActionLink("Articoli", "Index", "Articoli", new { area = "" }, new { @class = "nav-link text-white" })</li>
                             <li>@Html.ActionLink("Ordini", "Index", "Ordini", new { area = "" }, new { @class = "nav-link text-white" })</li>
-                            <li>@Html.ActionLink("Totale Ordini Pagati", "OrdiniEvasi", "Admin", new { area = "" }, new { @class = "nav-link text-white" })</li>
+                            <li>@Html.ActionLink("Ordini Pagati", "OrdiniEvasi", "Admin", new { area = "" }, new { @class = "nav-link text-white" })</li>
                             <li>@Html.ActionLink("Totale Incassato", "TotaleIncassato", "Admin", new { area = "" }, new { @class = "nav-link text-white" })</li>
 
 
-                            <li>@Html.ActionLink("Articoli", "Index", "Articoli", new { area = "" }, new { @class = "nav-link text-white" })</li>
                         }
                         else if (User.IsInRole("Cliente"))
                         {
