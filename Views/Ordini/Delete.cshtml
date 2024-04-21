@@ -4,11 +4,12 @@
     ViewBag.Title = "Delete";
 }
 
-<h2>Delete</h2>
+<div class="bebas-neue-regular text-center">
+    <h2>
+        Elimina Ordine
+    </h2>
 
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>Ordini</h4>
+</div>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -48,9 +49,12 @@
     @using (Html.BeginForm()) {
         @Html.AntiForgeryToken()
 
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
-        </div>
-    }
+<div class="form-actions no-color">
+    <input type="submit" value="Delete" class="btn btn-danger" />
+
+   
+        @Html.ActionLink("Torna alla Lista", "Index", null, new { @class = "btn btn-success" })
+   
 </div>
+    }
+
