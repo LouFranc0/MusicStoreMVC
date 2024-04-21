@@ -4,7 +4,13 @@
     ViewBag.Title = "Lista Ordini";
 }
 
-<h2>Lista Ordini</h2>
+<div class="bebas-neue-regular text-center">
+    <h2>
+        Lista Ordini
+    </h2>
+
+</div>
+
 
 <div class="table-responsive">
     <table class="table table-striped">
@@ -26,7 +32,7 @@
                     @Html.DisplayNameFor(model => model.Stato)
                 </th>
                 <th>
-                   Spese di spedizione
+                    Spese di spedizione
                 </th>
                 <th></th>
             </tr>
@@ -55,7 +61,7 @@
                     </td>
                     <td>
                         @Html.ActionLink("Edit", "Edit", new { id = item.Ordine_ID }, new { @class = "btn btn-primary" })
-                        <a href="/OrdArts/Details/@item.Ordine_ID" class="btn btn-dark">Details</a> 
+                        <a href="/OrdArts/Details/@item.Ordine_ID" class="btn btn-dark">Details</a>
                         @Html.ActionLink("Delete", "Delete", new { id = item.Ordine_ID }, new { @class = "btn btn-danger" })
                     </td>
                 </tr>

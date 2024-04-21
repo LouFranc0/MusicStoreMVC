@@ -26,7 +26,10 @@
 </style>
 
 <div class="container mt-5">
-    <h2 class="text-center mb-4">Carrello</h2>
+    <div class="bebas-neue-regular text-center mb-4">
+        <h2 class="text-center mb-4">Il tuo Carrello</h2>
+
+    </div>
 
     @if (ViewBag.UserCart != null && ViewBag.UserCart.Count > 0)
     {
@@ -107,6 +110,6 @@
     }
     else
     {
-        <p class="text-center">Il carrello è vuoto</p>
+        <p class="text-center fw-bolder">Il carrello è vuoto</p>
     }
 </div>

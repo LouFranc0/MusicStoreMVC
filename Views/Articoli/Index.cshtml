@@ -23,6 +23,13 @@
 </head>
 <body>
 
+    <div class="bebas-neue-regular text-center">
+        <h2>
+            I nostri articoli 
+        </h2>
+
+    </div>
+
 
     @if (User.IsInRole("Amministratore"))
     {
@@ -71,8 +78,8 @@
                         <div class="card h-100 c-card container img">
                             <img src="@item.Img" class="card-img w-100 mt-2" alt="@item.Nome">
                             <div class="card-body d-flex flex-column">
-                                <h5 class="card-title" style="color: #820905;">@item.Nome</h5>
-                                <p class="card-text text-secondary">@item.Prezzo €</p>
+                                <h5 class="card-title fw-bolder" style="color: #820905;">@item.Nome</h5>
+                                <p class="card-text text-dark fw-bolder">@item.Prezzo €</p>
                                 <p class="card-text text-secondary">@item.Dettagli</p>
                                 <div class="mt-auto d-flex">
                                     @using (Html.BeginForm("AddToCart", "OrdArts", new { id = item.Articolo_ID }, FormMethod.Post))
