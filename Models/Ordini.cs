@@ -42,7 +42,7 @@ namespace EcommerceChitarre.Models
         public int User_ID { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<OrdArt> OrdArt { get; set; }
+        public virtual ICollection<OrdArt> OrdArt { get; set; }  
 
         public virtual Users Users { get; set; }
     }

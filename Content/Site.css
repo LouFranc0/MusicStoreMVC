@@ -1,6 +1,10 @@
 ﻿
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 
-/* Set padding to keep content from hitting the edges */
+
+
+
 .body-content {
     margin-top: 15px;
     padding-left: 15px;
@@ -19,26 +23,11 @@ textarea {
     color: #E4E4DA;
 }
 .brand-tlt {
-    font-size: 20px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 30px !important;
     margin-bottom: 0px;
 }
 
-.footer {
-    background-color: #f8f9fa;
-    padding: 25px 0;
-    color: #636b6f;
-    font-size: 14px;
-    border-top: 1px solid #dee2e6;
-}
-
-    .footer a {
-        color: #636b6f;
-        text-decoration: none;
-    }
-
-        .footer a:hover {
-            color: #28a745;
-        }
 
 .btn-quantity {
     width: 30px;
@@ -47,6 +36,7 @@ textarea {
     line-height: 18px;
     border-radius: 15px;
     padding: 0;
+
 }
 
     .btn-quantity:hover {
@@ -58,3 +48,237 @@ textarea {
         width: 100%;
         text-align: center;
     }
+.tracking-in-contract-bck {
+    -webkit-animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) forwards;
+    animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) forwards;
+}
+
+@-webkit-keyframes tracking-in-contract-bck {
+    0% {
+        letter-spacing: 1em;
+        -webkit-transform: translateZ(400px);
+        transform: translateZ(400px);
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        opacity: 1;
+    }
+}
+
+@keyframes tracking-in-contract-bck {
+    0% {
+        letter-spacing: 1em;
+        -webkit-transform: translateZ(400px);
+        transform: translateZ(400px);
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        opacity: 1;
+    }
+}
+
+.wobble-hor-top {
+    -webkit-animation: wobble-hor-top 0.8s both;
+    animation: wobble-hor-top 0.8s both;
+}
+
+@-webkit-keyframes wobble-hor-top {
+    0%, 100% {
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+    }
+
+    15% {
+        -webkit-transform: translateX(-30px) rotate(6deg);
+        transform: translateX(-30px) rotate(6deg);
+    }
+
+    30% {
+        -webkit-transform: translateX(15px) rotate(-6deg);
+        transform: translateX(15px) rotate(-6deg);
+    }
+
+    45% {
+        -webkit-transform: translateX(-15px) rotate(3.6deg);
+        transform: translateX(-15px) rotate(3.6deg);
+    }
+
+    60% {
+        -webkit-transform: translateX(9px) rotate(-2.4deg);
+        transform: translateX(9px) rotate(-2.4deg);
+    }
+
+    75% {
+        -webkit-transform: translateX(-6px) rotate(1.2deg);
+        transform: translateX(-6px) rotate(1.2deg);
+    }
+}
+
+@keyframes wobble-hor-top {
+    0%, 100% {
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+    }
+
+    15% {
+        -webkit-transform: translateX(-30px) rotate(6deg);
+        transform: translateX(-30px) rotate(6deg);
+    }
+
+    30% {
+        -webkit-transform: translateX(15px) rotate(-6deg);
+        transform: translateX(15px) rotate(-6deg);
+    }
+
+    45% {
+        -webkit-transform: translateX(-15px) rotate(3.6deg);
+        transform: translateX(-15px) rotate(3.6deg);
+    }
+
+    60% {
+        -webkit-transform: translateX(9px) rotate(-2.4deg);
+        transform: translateX(9px) rotate(-2.4deg);
+    }
+
+    75% {
+        -webkit-transform: translateX(-6px) rotate(1.2deg);
+        transform: translateX(-6px) rotate(1.2deg);
+    }
+}
+
+.jello-horizontal {
+    -webkit-animation: jello-horizontal 0.9s both;
+    animation: jello-horizontal 0.9s both;
+}
+
+@-webkit-keyframes jello-horizontal {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    30% {
+        -webkit-transform: scale3d(1.25, 0.75, 1);
+        transform: scale3d(1.25, 0.75, 1);
+    }
+
+    40% {
+        -webkit-transform: scale3d(0.75, 1.25, 1);
+        transform: scale3d(0.75, 1.25, 1);
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.15, 0.85, 1);
+        transform: scale3d(1.15, 0.85, 1);
+    }
+
+    65% {
+        -webkit-transform: scale3d(0.95, 1.05, 1);
+        transform: scale3d(0.95, 1.05, 1);
+    }
+
+    75% {
+        -webkit-transform: scale3d(1.05, 0.95, 1);
+        transform: scale3d(1.05, 0.95, 1);
+    }
+
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes jello-horizontal {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    30% {
+        -webkit-transform: scale3d(1.25, 0.75, 1);
+        transform: scale3d(1.25, 0.75, 1);
+    }
+
+    40% {
+        -webkit-transform: scale3d(0.75, 1.25, 1);
+        transform: scale3d(0.75, 1.25, 1);
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.15, 0.85, 1);
+        transform: scale3d(1.15, 0.85, 1);
+    }
+
+    65% {
+        -webkit-transform: scale3d(0.95, 1.05, 1);
+        transform: scale3d(0.95, 1.05, 1);
+    }
+
+    75% {
+        -webkit-transform: scale3d(1.05, 0.95, 1);
+        transform: scale3d(1.05, 0.95, 1);
+    }
+
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.scale-in-ver-center {
+    -webkit-animation: scale-in-ver-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: scale-in-ver-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes scale-in-ver-center {
+    0% {
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+@keyframes scale-in-ver-center {
+    0% {
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+.margin-right {
+    margin-right: 10px;
+}
+.font-family {
+    font-family: "Bebas Neue", sans-serif;
+}
