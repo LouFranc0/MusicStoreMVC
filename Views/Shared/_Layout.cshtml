@@ -20,7 +20,7 @@
 
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm r-navbar text-white sticky-top">
             <div class="container d-flex justify-content-between ">
-                <div class="d-flex align-items-center wobble-hor-top brand-tlt ">
+                <div class="d-flex align-items-center jello-horizontal brand-tlt ">
                     <a class="navbar-brand brand-tlt text-white" href="@Url.Action("Index", "Home", new { @class ="font-family"})">
                         Music Shop
                     </a>
@@ -58,12 +58,12 @@
                                 <li class="nav-item"><span class="material-symbols-outlined">@Html.ActionLink("shopping_cart", "Cart", "OrdArts", new { area = "" }, new { @class = "nav-link text-white font-family margin-right" })   </span></li>
 
                             }
-                            <li class="nav-item">@Html.ActionLink("Logout", "Logout", "Auth", new { area = "" }, new { @class = "nav-link btn btn-dark text-white font-family" })</li>
+                            <li class="nav-item">@Html.ActionLink("Logout", "Logout", "Auth", new { area = "" }, new { @class = "nav-link btn btn-lg-dark text-white font-family font-size" })</li>
                         }
                         else
                         {
                             <li class="nav-item">
-                                @Html.ActionLink("Login", "Login", "Auth", new { area = "" }, new { @class = "nav-link btn btn-success text-white font-family" })
+                                @Html.ActionLink("Login", "Login", "Auth", new { area = "" }, new { @class = "nav-link btn-lg-success text-white font-family font-size" })
                             </li>
                         }
 

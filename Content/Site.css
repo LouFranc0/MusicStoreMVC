@@ -282,3 +282,6 @@ textarea {
 .font-family {
     font-family: "Bebas Neue", sans-serif;
 }
+.font-size {
+    font-size: 25px !important;
+}
