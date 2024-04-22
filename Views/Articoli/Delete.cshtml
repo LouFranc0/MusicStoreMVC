@@ -6,9 +6,14 @@
 
 
 
-<h3>Sei sicuro di rimuovere questo articolo?</h3>
+<div class="bebas-neue-regular text-center">
+    <h2>
+        Elimina articolo
+    </h2>
+
+</div>
 <div>
-   
+
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -53,12 +58,13 @@
 
     </dl>
 
-    @using (Html.BeginForm()) {
+    @using (Html.BeginForm())
+    {
         @Html.AntiForgeryToken()
 
-<div class="form-actions no-color">
-    <input type="submit" value="Delete" class="btn btn-danger" />
-    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-primary" })
-</div>
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" />
+            @Html.ActionLink("Torna alla lista", "Index", null, new { @class = "btn btn-primary" })
+        </div>
     }
 </div>

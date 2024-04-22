@@ -1,5 +1,8 @@
 ﻿@model EcommerceChitarre.Models.Ordini
+<div class="bebas-neue-regular text-center mb-4">
+    <h2 class="text-center mb-4">Il tuo Carrello</h2>
 
+</div>
 @{
     ViewBag.Title = "Carrello";
 }
@@ -26,10 +29,7 @@
 </style>
 
 <div class="container mt-5">
-    <div class="bebas-neue-regular text-center mb-4">
-        <h2 class="text-center mb-4">Il tuo Carrello</h2>
 
-    </div>
 
     @if (ViewBag.UserCart != null && ViewBag.UserCart.Count > 0)
     {
@@ -86,7 +86,10 @@
                         {
                             @Html.AntiForgeryToken()
 
-                            <h4 class="card-title">Ordina</h4>
+                            <div class="bebas-neue-regular text-center mb-4">
+                                <h4 class="card-title">Ordina</h4>
+
+                            </div>
                             <div class="form-group">
                                 @Html.LabelFor(model => model.Indirizzo, htmlAttributes: new { @class = "control-label" })
                                 @Html.EditorFor(model => model.Indirizzo, new { htmlAttributes = new { @class = "form-control" } })
