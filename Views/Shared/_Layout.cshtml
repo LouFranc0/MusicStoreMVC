@@ -8,16 +8,21 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="~/Content/StyleSheet2.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+
+
 
 
 
 </head>
 <body>
-    <div class="d-flex flex-column min-vh-100" style=" font-family:Beb as Neue, sans-serif;">
+    <div class="d-flex flex-column min-vh-100" style="font-family: Beb as Neue, sans-serif;">
 
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm r-navbar text-white sticky-top">
             <div class="container d-flex justify-content-between ">
@@ -60,13 +65,16 @@
                                 <li class="nav-item"><div class="mt-2 material-symbols-outlined">@Html.ActionLink("shopping_cart", "Cart", "OrdArts", new { area = "" }, new { @class = "nav-link text-white margin" })   </div></li>
 
                             }
-                            <li class="nav-item"><div class="bebas-neue-regular" >@Html.ActionLink("Logout", "Logout", "Auth", new { area = "" }, new { @class = "nav-link btn btn-lg-dark text-white font-family font-size" })</div></li>
+                            <li class="nav-item"><div class="bebas-neue-regular" >@Html.ActionLink("Logout", "Logout", "Auth", new { area = "" }, new { @class = "nav-link btn btn-lg-dark text-white  font-family:Roboto Condensed font-size" })</div></li>
                         }
                         else
                         {
-                            <li class="nav-item">
-                                @Html.ActionLink("Login", "Login", "Auth", new { area = "" }, new { @class = "nav-link btn-lg-success text-white font-family font-size" })
-                            </li>
+                    <li class="nav-item" style="display:flex">
+                        <span class="material-symbols-outlined pt-3">
+                            account_circle
+                        </span>
+                        @Html.ActionLink("Login", "Login", "Auth", new { area = "" }, new { @class = "nav-link btn-lg-success text-white font-family font-size" })
+                    </li>
                         }
 
                     </ul>

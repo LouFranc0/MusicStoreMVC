@@ -80,7 +80,7 @@
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title fw-bolder" style="color: #820905;">@item.Nome</h5>
                                 <p class="card-text text-dark fw-bolder">@item.Prezzo €</p>
-                                <p class="card-text text-secondary">@item.Dettagli</p>
+                                <p class="card-text text-dark fw-lighter">@item.Dettagli</p>
                                 <div class="mt-auto d-flex">
                                     @using (Html.BeginForm("AddToCart", "OrdArts", new { id = item.Articolo_ID }, FormMethod.Post))
                                     {
