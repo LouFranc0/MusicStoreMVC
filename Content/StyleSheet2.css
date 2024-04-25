@@ -1,4 +1,6 @@
-﻿
+﻿.r-navbar {
+    background-color: #8a4d9f !important;
+}
 .zoom-img {
     transition: all 0.3s ease;
 
