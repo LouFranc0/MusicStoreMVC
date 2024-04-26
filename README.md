@@ -9,11 +9,11 @@ L'obiettivo principale di questo progetto è creare un'applicazione web che cons
 
 ### Tecnologie Utilizzate
 
-ASP.NET MVC: Utilizzato per lo sviluppo del frontend e del backend dell'applicazione web.
-Entity Framework: Framework ORM (Object-Relational Mapping) utilizzato per la gestione della persistenza dei dati.
-C#: Linguaggio di programmazione principale utilizzato per lo sviluppo dell'applicazione.
-HTML/CSS/JavaScript: Utilizzati per la creazione dell'interfaccia utente e l'esperienza utente.
-Bootstrap: Framework CSS utilizzato per la progettazione del layout responsivo.
+- ASP.NET MVC: Utilizzato per lo sviluppo del frontend e del backend dell'applicazione web.
+- Entity Framework: Framework ORM (Object-Relational Mapping) utilizzato per la gestione della persistenza dei dati.
+- C#: Linguaggio di programmazione principale utilizzato per lo sviluppo dell'applicazione.
+- HTML/CSS/JavaScript: Utilizzati per la creazione dell'interfaccia utente e l'esperienza utente.
+- Bootstrap: Framework CSS utilizzato per la progettazione del layout responsivo.
 
 ### Funzionalità Principali
 
