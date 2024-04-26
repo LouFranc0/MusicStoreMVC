@@ -25,7 +25,7 @@ Navigazione del Catalogo: Gli utenti possono sfogliare il catalogo di strumenti 
 - Checkout: Gli utenti possono completare il processo di acquisto, fornendo le informazioni di spedizione
 - Gestione degli Ordini: Gli utenti possono visualizzare lo stato dei loro ordini e la cronologia degli acquisti.
 - Panoramica dell'Amministratore: Gli amministratori possono gestire i prodotti e gli ordini
-- 
+
 ### Installazione e Configurazione
 
 - Clonare il repository del progetto.
