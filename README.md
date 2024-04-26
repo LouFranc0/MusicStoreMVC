@@ -18,8 +18,8 @@ Bootstrap: Framework CSS utilizzato per la progettazione del layout responsivo.
 ### Funzionalità Principali
 
 Registrazione e Autenticazione degli Utenti: Gli utenti possono registrarsi, accedere e gestire i propri account utente.
-Navigazione del Catalogo: Gli utenti possono sfogliare il catalogo di strumenti musicali disponibili.
 
+- Navigazione del Catalogo: Gli utenti possono sfogliare il catalogo di strumenti musicali disponibili.
 - Dettagli del Prodotto: Gli utenti possono visualizzare dettagli specifici su ogni prodotto, come descrizione, prezzo e disponibilità.
 - Carrello: Gli utenti possono aggiungere prodotti al carrello e gestire gli articoli presenti nel carrello prima di effettuare il checkout.
 - Checkout: Gli utenti possono completare il processo di acquisto, fornendo le informazioni di spedizione
