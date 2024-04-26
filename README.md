@@ -24,7 +24,9 @@ Registrazione e Autenticazione degli Utenti: Gli utenti possono registrarsi, acc
 - Carrello: Gli utenti possono aggiungere prodotti al carrello e gestire gli articoli presenti nel carrello prima di effettuare il checkout.
 - Checkout: Gli utenti possono completare il processo di acquisto, fornendo le informazioni di spedizione
 - Gestione degli Ordini: Gli utenti possono visualizzare lo stato dei loro ordini e la cronologia degli acquisti.
-- Panoramica dell'Amministratore: Gli amministratori possono gestire i prodotti e gli ordini
+- Panoramica dell'Amministratore: Gli amministratori possono gestire i prodotti e gli ordini.
+
+  In seguito saranno disponibili il pagamento dei vostri acquisti e la gestione utenti da parte dell'amministratore.
 
 ### Installazione e Configurazione
 
