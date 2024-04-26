@@ -17,8 +17,7 @@ L'obiettivo principale di questo progetto è creare un'applicazione web che cons
 
 ### Funzionalità Principali
 
-Registrazione e Autenticazione degli Utenti: Gli utenti possono registrarsi, accedere e gestire i propri account utente.
-
+- Registrazione e Autenticazione degli Utenti: Gli utenti possono registrarsi, accedere e gestire i propri account utente.
 - Navigazione del Catalogo: Gli utenti possono sfogliare il catalogo di strumenti musicali disponibili.
 - Dettagli del Prodotto: Gli utenti possono visualizzare dettagli specifici su ogni prodotto, come descrizione, prezzo e disponibilità.
 - Carrello: Gli utenti possono aggiungere prodotti al carrello e gestire gli articoli presenti nel carrello prima di effettuare il checkout.
@@ -26,7 +25,7 @@ Registrazione e Autenticazione degli Utenti: Gli utenti possono registrarsi, acc
 - Gestione degli Ordini: Gli utenti possono visualizzare lo stato dei loro ordini e la cronologia degli acquisti.
 - Panoramica dell'Amministratore: Gli amministratori possono gestire i prodotti e gli ordini.
 
-  In seguito saranno disponibili il pagamento dei vostri acquisti e la gestione utenti da parte dell'amministratore.
+In seguito saranno disponibili il pagamento dei vostri acquisti e la gestione utenti da parte dell'amministratore.
 
 ### Installazione e Configurazione
 
@@ -35,4 +34,4 @@ Registrazione e Autenticazione degli Utenti: Gli utenti possono registrarsi, acc
 - Eseguire il comando Update-Database nella Console di Gestione Pacchetti per creare il database e le tabelle necessarie.
 
 ### Contatti
-Per ulteriori informazioni o domande, non esitate a contattare il team di sviluppo all'indirizzo email caputo.francesco001@gmail.com
+Per ulteriori informazioni o domande, non esitate a contattarmi all'indirizzo email caputo.francesco001@gmail.com
