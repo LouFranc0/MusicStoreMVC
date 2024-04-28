@@ -8,7 +8,7 @@ namespace EcommerceChitarre.Models
 {
     public class RoleManager : RoleProvider
     {
-        DBContext db = new DBContext();
+        readonly DBContext db = new DBContext();
         public override string ApplicationName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         public override void AddUsersToRoles(string[] usernames, string[] roleNames)
