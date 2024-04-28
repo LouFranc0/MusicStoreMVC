@@ -21,9 +21,9 @@
 <body>
     <div class="d-flex flex-column min-vh-100" style="font-family: Bebas-Neue, sans-serif;">
 
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm r-navbar text-white sticky-top" style="background-color: #5c50b2 !important; ">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm r-navbar text-white sticky-top" style="background-color: #212121 !important; ">
             <div class="container d-flex justify-content-between ">
-                <div class="d-flex align-items-center  brand-tlt " >
+                <div class="d-flex align-items-center  brand-tlt ">
                     <a class="navbar-brand brand-tlt text-white" style="font-family:Orbitron, sans-serif; font-size:1.8rem;" href="@Url.Action("Index", "Home")">
                         MusicStore
                     </a>
@@ -45,7 +45,7 @@
                         else if (User.IsInRole("Cliente"))
                         {
 
-                            <li >@Html.ActionLink("I tuoi Ordini", "Details", "Ordini", new { id = User.Identity.Name }, new { @class = "nav-link text-white" })</li>
+                            <li style="font-family: Comfortaa, sans-serif; font-size:1.3rem;">@Html.ActionLink("I tuoi Ordini", "Details", "Ordini", new { id = User.Identity.Name }, new { @class = "nav-link text-white" })</li>
                         }
 
 
@@ -61,17 +61,28 @@
                         {
                             if (User.IsInRole("Cliente"))
                             {
-                                <li class="nav-item"><div class="mt-2 material-symbols-outlined" style="margin-right:40px;">@Html.ActionLink("shopping_cart", "Cart", "OrdArts", new { area = "" }, new { @class = "nav-link text-white" })   </div></li>
+                                <li class="nav-item">
+                                    <div class="mt-2 material-symbols-outlined" style="margin-top:5px !important;">
+                                        @Html.ActionLink("shopping_cart", "Cart", "OrdArts", new { area = "" }, new { @class = "nav-link text-white" })
+                                    </div>
+                                </li>
 
                             }
-                            <li class="nav-item"><div class="bebas-neue-regular" style="font-family: Orbitron, sans-serif; font-size:1rem;" >@Html.ActionLink("Logout", "Logout", "Auth", new { area = "" }, new { @class = "nav-link btn btn-lg-dark text-white" })</div></li>
+                            <li class="nav-item"><div class="bebas-neue-regular" style="display: flex; font-family: Comfortaa, sans-serif; font-size: 1.3rem;">@Html.ActionLink("Logout", "Logout", "Auth", new { area = "" }, new { @class = "nav-link btn btn-lg-dark text-white" })</div></li>
                         }
                         else
                         {
-                    <li class="nav-item" style="display: flex; font-family: Orbitron, sans-serif; font-size:1rem;" >
-                        
-                        @Html.ActionLink("Login", "Login", "Auth", new { area = "" }, new { @class = "nav-link btn-lg-success text-white" })
-                    </li>
+                            <li class="nav-item">
+                                <div class="mt-2 material-symbols-outlined" style="margin-top:5px !important;">
+                                    @Html.ActionLink("account_circle", "Login", "Auth", new { area = "" }, new { @class = "nav-link btn-lg-success text-white" })
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div class="mt-2" style="margin-top: 5px !important; font-family: Comfortaa, sans-serif; font-size: 1.3rem;">
+                                    @Html.ActionLink("Login", "Login", "Auth", new { area = "" }, new { @class = "nav-link btn-lg-success text-white" })
+                                </div>
+                            </li>
+
                         }
 
                     </ul>
@@ -82,16 +93,17 @@
 
 
         <div class="container body-content flex-grow-1">
+
             @RenderBody()
 
 
         </div>
 
-     
+
 
         <hr />
 
-   
+
         <footer class="mt-5">
             <div class="container">
                 <div class="row">
@@ -105,7 +117,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="bebas-neue-regular"><h5>Orari</h5></div>
-                        
+
                         <p>Lunedì - Sabato: 08:30 - 12:30 / 16:30 - 20:00</p>
                     </div>
                     <div class="col-md-4">
@@ -123,8 +135,8 @@
                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16" style="margin-right:10px; color:black;">
                                 <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
                             </svg>
-                            </a>
-</div>
+                        </a>
+                    </div>
                 </div>
                 <hr class="bg-white" />
                 <div class="text-center">
